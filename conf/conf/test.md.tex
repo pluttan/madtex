@@ -1,0 +1,128 @@
+
+\include{/Users/pluttan/Documents/forMyDocs/preamb.tex}
+\renewcommand{\copyright}{pluttan, fixii}
+\begin{document}    
+    
+\LaTeX{} 
+1
+
+\section{\textbf{Заголовки}}
+\dotitle{name}{subject}
+\section{section}
+\subsection{subsection}
+\subsubsection{subsubsection}
+\paragraph{paragraph}
+\subparagraph{subparagraph}
+\section{\textbf{Акцент}}
+
+\textit{Курсив}, \textbf{Жирный}, \sout{Зачеркнутый}
+
+\textit{Курсив}, \textbf{Жирный}
+\begin{mainQuote}
+
+Цитаты
+
+В 2 абзаца
+\end{mainQuote}
+\section{\textbf{Списки}}
+\begin{enumerate}
+
+\item Первый элемент нумерованного списка
+\begin{enumerate}
+
+\item Первый элемент в первом элементе
+
+\end{enumerate}
+\item Второй элемент нумерованного списка
+
+\end{enumerate}
+\begin{itemize}
+
+\item Первый элемент ненумерованного списка
+\begin{enumerate}
+
+\item Первый элемент в первом элементе
+
+\end{enumerate}
+\item Второй элемент ненумерованного списка
+\item Первый элемент ненумерованного списка
+\begin{itemize}
+
+\item Первый элемент в первом элементе
+
+\end{itemize}
+\item Второй элемент ненумерованного списка
+\item Первый элемент ненумерованного списка
+
+Просто текст
+\item Второй элемент ненумерованного списка
+
+\end{itemize}
+\section{\textbf{Код}}
+
+Это код : \texttt{for i in range(1,100):print(i)}
+\begin{lstlisting}
+for i in range(1,100):print(i)
+\end{lstlisting}
+\begin{lstlisting}
+for i in range(1,100):print(i)
+\end{lstlisting}
+\begin{lstlisting}[language = python]
+for i in range(1,100):print(i)
+\end{lstlisting}
+\section{\textbf{Изображения}}
+
+
+\image{img/000original.jpg}{120}
+
+\section{\textbf{Ссылки}}
+
+\hrf{https://vk.com/pluttan}{https://vk.com/pluttan}
+
+\hrf{https://vk.com/pluttan}{Мой ВК}
+\section{\textbf{Символы}}
+
+` * \_ {} [] () \# + - . ! | > <
+\section{\textbf{Таблица}}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+
+
+
+\textbf{2}&\textbf{2}&\textbf{2}\\
+\hline
+
+
+
+1&2&3\\
+
+144&355&444\\
+
+\hline
+\end{tabular}
+\end{center}
+\section{\textbf{Синтаксис LaTeXa}}
+
+Пусть функция $f(x)$ определена… $$X = A^{-1}B \Rightarrow \begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix} = \frac{1}{\Delta}
+\begin{pmatrix}
+    A_{11}&A_{21}&\ldots&A_{n1}\\
+    A_{12}&A_{22}&\ldots&A_{n2}\\
+    \vdots&\vdots&\ddots&\vdots\\
+    A_{1n}&A_{2n}&\ldots&A_{nn}\\
+\end{pmatrix}
+\begin{pmatrix}b_1\\b_2\\\vdots\\b_n\end{pmatrix}
+$$
+\section{\textbf{Сноски (без предпросмотра)}}
+
+word \footnote{define word}
+\section{\textbf{Определения(без предпосмотра)}}
+
+
+\textbf{Apple}\\
+\hspace{20pt}Pomaceous fruit of plants of the genus Malus in the family Rosaceae.
+
+
+
+\end{document}
+    

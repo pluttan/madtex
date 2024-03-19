@@ -1,0 +1,128 @@
+\include{/Users/pluttan/Documents/forMyDocs/preamb.tex} % <!-- ~preamb -->
+ % <!-- ~preambMisha -->
+% //TODO <!-- ~whodo pluttan, fixii -->
+\begin{document} % <!-- ~bd -->
+1 %<!-- *print(1) -->
+\LaTeX %<!-- ?\LaTeX -->
+%<!-- ! --><!-- ^ --><!-- & -->
+\section{\textbf{Заголовки}} % ## **Заголовки**
+
+\dotitle{name}{subject} % # name : subject
+\section{section} % ## section
+\subsection{subsection} % ### subsection
+\subsubsection{subsubsection} % #### subsubsection
+\paragraph{paragraph} % ##### paragraph
+\subparagraph{subparagraph} % ###### subparagraph
+\section{\textbf{Акцент}} % ## **Акцент**
+\textit{Курсив}, \textbf{Жирный}, \sout{Зачеркнутый} % *Курсив*, **Жирный**, ~~Зачеркнутый~~
+
+\textit{Курсив}, \textbf{Жирный} % _Курсив_, __Жирный__
+
+\begin{myquote}
+Цитаты% >Цитаты 
+\\% >
+В 2 абзаца% >В 2 абзаца
+\end{myquote}
+
+\section{\textbf{Списки}} % ## **Списки**
+\begin{enumerate}
+\item Первый элемент нумерованного списка % 1. Первый элемент нумерованного списка
+    \begin{enumerate}
+        \item Первый элемент в первом элементе % 1. Первый элемент в первом элементе
+    \end{enumerate}
+\item Второй элемент нумерованного  списка % 2. Второй элемент нумерованного списка
+\end{enumerate}
+
+\begin{itemize}
+    \item Первый элемент ненумерованного списка % * Первый элемент ненумерованного списка
+        \begin{enumerate}
+            \item Первый элемент в первом элементе % 1. Первый элемент в первом элементе
+        \end{enumerate}
+    \item Второй элемент ненумерованного  списка % * Второй элемент ненумерованного списка
+\end{itemize}
+
+\begin{itemize}
+    \item Первый элемент ненумерованного списка % - Первый элемент ненумерованного списка
+        \begin{itemize}
+            \item Первый элемент в первом элементе % * Первый элемент в первом элементе
+        \end{itemize}
+    \item Второй элемент ненумерованного  списка % - Второй элемент ненумерованного списка
+\end{itemize}
+
+\begin{itemize}
+    \item Первый элемент ненумерованного списка % + Первый элемент ненумерованного списка
+    Просто текст
+    \item Второй элемент ненумерованного  списка % + Второй элемент ненумерованного списка
+\end{itemize}
+
+\section{\textbf{Код}} % ## **Код**
+
+Это код : \texttt{for i in range(1,100):print(i)} % Это код : `for i in range(1,100):print(i)`
+
+% ```
+% for i in range(1,100):print(i)
+% ```
+
+\begin{lstlisting}                  
+for i in range(1,100):print(i)
+\end{lstlisting}                    
+
+%   for i in range(1,100):print(i)
+\begin{lstlisting}
+for i in range(1,100):print(i) 
+\end{lstlisting}  
+
+% ```python
+% for i in range(1,100):print(i)
+% ```
+
+\begin{lstlisting}[language=python]  
+for i in range(1,100):print(i)       
+\end{lstlisting}                    
+
+\section{\textbf{Изображения}} % ## **Изображения**
+
+% //TODO %![100](https://liwli.ru/upload/iblock/460/0hR6uB5aWLz2O_XinqatMtzSPqzxbgiw.jpeg)
+
+\section{\textbf{Ссылки}} % ## **Ссылки**
+
+\href{https://vk.com/pluttan}
+
+\section{\textbf{Символы}} % ## **Символы**
+%\\ \` \* \_ \{} \[] \() \# \+ \- \. \! \|
+$\backslash$ \` \* \_ \{\} [] () \# + - . ! |
+
+\section{\textbf{Таблица}} % ## **Таблица**
+
+\begin{center}
+    \begin{tabular}{ l c r }
+    2 & 2 & 2 \\        % | 2    |   2   |    2 |
+                        % | :--- | :---: | ---: |
+     1 & 2 & 3 \\       % | 1    |   2   |    3 |
+     144 & 355 & 444 \\ % | 144  |  355  |  444 |
+    \end{tabular}
+\end{center}
+
+\section{\textbf{Синтаксис}\LaTeX a} % ## **Синтаксис $\LaTeX$a**
+
+Пусть функция $f(x)$ определена...
+$$X = A^{-1}B \Rightarrow \begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix} = \frac{1}{\Delta}
+\begin{pmatrix}
+    A_{11}&A_{21}&\ldots&A_{n1}\\
+    A_{12}&A_{22}&\ldots&A_{n2}\\
+    \vdots&\vdots&\ddots&\vdots\\
+    A_{1n}&A_{2n}&\ldots&A_{nn}\\
+\end{pmatrix}
+\begin{pmatrix}b_1\\b_2\\\vdots\\b_n\end{pmatrix}
+$$
+
+\section{\textbf{Сноски (без предпросмотра)}}               % ## **Сноски (без предпросмотра)**
+word\footnote{word - define word}                           % word <!-- ~note define word -->
+three big word\footnote{three big word - define three word} % three big word <!-- ~note 3:define three word-->
+
+\section{\textbf{Определения(без предпосмотра)}} % ## **Определения(без предпосмотра)**
+
+\textbf{Apple}\\
+\hspace{20pt}Pomaceous fruit of plants of the genus Malus in the family Rosaceae.
+
+\end{document} % <!-- ~ed -->
