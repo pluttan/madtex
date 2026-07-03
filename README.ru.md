@@ -1,15 +1,8 @@
-![Header](header.png)
-
 <div align="center">
 
 # MaDTeX
 
 **Конвертер Markdown в LaTeX со встроенным выполнением Python**
-
-[![License](https://img.shields.io/badge/license-MIT-2C2C2C?style=for-the-badge&labelColor=1E1E1E)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.x-2C2C2C?style=for-the-badge&logo=python&labelColor=1E1E1E)]()
-[![Pandoc](https://img.shields.io/badge/pandoc-required-2C2C2C?style=for-the-badge&labelColor=1E1E1E)]()
-[![LaTeX](https://img.shields.io/badge/latex-output-2C2C2C?style=for-the-badge&logo=latex&labelColor=1E1E1E)]()
 
 </div>
 
@@ -40,7 +33,28 @@
 
 </div>
 
-## ■ Запуск
+## ■ Как это работает
+
+```
+1. Математические выражения ($...$ и $$...$$) извлекаются из исходного Markdown и сохраняются.
+2. Pandoc конвертирует Markdown в промежуточный HTML (conf/exam.html).
+3. Собственный рекурсивный парсер обходит HTML-теги и транслирует их в конструкции LaTeX.
+4. Встроенные блоки Python (<!-- *code -->) выполняются через exec(), их stdout вставляется в вывод.
+5. Сырой LaTeX (<!-- ?\macro -->), пользовательские команды (~whodo, ~note, ~reflist и т.д.) и обычные HTML-комментарии разворачиваются.
+6. Сохранённые формулы восстанавливаются дословно; итоговый LaTeX-источник записывается в conf/exam.tex.
+```
+
+## ■ Скриншоты
+
+<div align="center">
+
+![Screenshot](screenshots/main.png)
+
+*Результат основной конвертации — сгенерированный LaTeX-источник из Markdown-ввода*
+
+</div>
+
+## ■ Использование
 
 ```bash
 # Requires `pandoc` on PATH.
@@ -55,16 +69,6 @@ python MaDTeX.py
 > Примечание: сгенерированный `.tex` содержит жёстко прописанный путь к преамбуле
 > (`/Users/pluttan/Documents/forMyDocs/preamb.tex`); компиляцию в PDF выполнять отдельно.
 
-## ■ Скриншоты
-
-<div align="center">
-
-![Screenshot](screenshots/main.png)
-
-*Результат основной конвертации — сгенерированный LaTeX-источник из Markdown-ввода*
-
-</div>
-
-## ■ License
+## ■ Лицензия
 
 MIT © [pluttan](https://github.com/pluttan)
